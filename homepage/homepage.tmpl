@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Homepage</title>
+    <meta content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <h1 class="page-title">{{.PageTitle}}</h1>
+
+    <section>
+        <h2>API Routes</h2>
+        {{if not .ApiRoutes}}
+        <div>No API Routes</div>
+        {{else}}
+        <ul>
+            {{range .ApiRoutes}}
+            <li>{{.}}</li>
+            {{end}}
+        </ul>
+        {{end}}
+        <section>
+
+            <h2>HTML Routes</h2>
+            {{if not .HtmlRoutes}}
+            <div>No HTML Routes</div>
+            {{else}}
+            <ul>
+                {{range .HtmlRoutes}}
+                <li>{{.}}</li>
+                {{end}}
+            </ul>
+            {{end}}
+</body>
+
+</html>
